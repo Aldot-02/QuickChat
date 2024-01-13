@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Header.css';
-import { logout } from '../../actions/AuthActions';
+import { logout } from '../../actions/AuthAction.js';
 import { useParams } from 'react-router-dom';
-import { uploadImage } from "../../actions/UploadAction";
-import { updateUser } from "../../actions/UserAction";
+import { uploadImage } from "../../actions/UploadAction.js";
+import { updateUser } from "../../actions/UserAction.js";
 
 function Header() {
   const dispatch = useDispatch();

@@ -1,4 +1,4 @@
-import * as UploadApi from "../api/UploadRequests.js"
+import * as UploadApi from "../api/UploadRequest.js"
 
 export const uploadImage = (data) => async (dispatch) => {
   try {
