@@ -1,4 +1,4 @@
-<h1 align="center" style="color: #0994f0;">Quick Chat App</h1>
+<h1>Quick Chat App</h1>
 
 <h3 align="center"><a>twizald.02@gmail.com</a> - Quick Chat App</h3>
 
