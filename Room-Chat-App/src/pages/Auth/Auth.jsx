@@ -117,7 +117,7 @@ const Auth = () => {
               display: confirmPass ? "none" : "block",
             }}
           >
-            Confirm password does not match your password
+            Try again. Confirm password and password does not match
           </span>
           <div className="auth-btn">
             <span

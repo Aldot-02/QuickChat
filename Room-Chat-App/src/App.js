@@ -21,7 +21,7 @@ function App() {
           path="*"
           element={
             <main style={{ padding: "1rem" }}>
-              <p>There's nothing here!</p>
+              <p>Something went wrong. There is nothing to display here!</p>
             </main>
           }
         />

@@ -68,7 +68,6 @@ const Chat = () => {
   }
   return (
     <div className="Chat">
-      {/* Left Side */}
       <div className="Left-side-chat">
         <div className="Chat-container">
           <Header/>
@@ -81,7 +80,6 @@ const Chat = () => {
           </div>
         </div>
       </div>
-      {/* Right Side */}
       <div className="Right-side-chat">
         <div>
           <ChatBox chat={currentChat} currentUser = {user._id} setSendMessage={setSendMessage} receiveMessage={receiveMessage}/>
