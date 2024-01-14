@@ -1,61 +1,84 @@
 .Chat {
-    position: relative;
     display: grid;
-    grid-template-columns: 22% auto;
-    gap: 1rem;
+    grid-template-columns: 30% auto;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   
   .Left-side-chat {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: #111b21;
+    border-right: 1px solid #374045;
   }
   
   .Chat-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    background: var(--cardColor);
-    border-radius: 1rem;
-    padding: 1rem;
-    height: auto;
-    min-height: 80vh;
-    overflow: scroll;
+    height: 100%;
   }
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background-color:#111b21;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:#374045;
+}
   
-  .Chat-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
+.Chat-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 75px);
+  overflow:auto;
+  scrollbar-color: #374045 #111b21;
+  scrollbar-width: thin;
+  background-color: #111b21;
+}
   
-  .Right-side-chat {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .conversation:hover {
-    background: #80808038;
-    cursor: pointer;
-  }
+.Right-side-chat {
+  display: flex;
+  flex-direction: column;
+  background-color: #182933;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.conversation:hover {
+  background-color: #37475049;
+  cursor: pointer;
+}
   
-  .conversation {
-    border-radius: 0.5rem;
-    padding: 10px;
-  }
+.conversation {
+  min-height: 75px !important;
+  width:100%;
+  background-color:#111b21;
+  color:white;
+  border-bottom: 1px solid #374045;
+  padding: 0 0.5rem 0 3rem;
+}
+
   
-  .conversation > div {
-    position: relative;
-  }
-  
-  .online-dot {
-    background-color: greenyellow;
-    border-radius: 50%;
-    position: absolute;
-    left: 2rem;
-    width: 1rem;
-    height: 1rem;
-  }
+.online-dot {
+  background-color: rgb(8, 206, 8);
+  border-radius: 50%;
+  position: absolute;
+  left: 3.25rem;
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.name {
+  gap: 10px;
+  margin-left: 10px;
+}
   
   
   .chatbox-empty-message {
@@ -64,6 +87,8 @@
     justify-content: center;
     font-size: 20px;
   }
+
+
   
   
   @media screen and (max-width: 768px) {

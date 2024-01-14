@@ -84,8 +84,8 @@ function Header() {
             alt="ProfileImage"
             className="followerImage main-img"
           />
-          
         </div>
+        <span>{formData?.firstname}</span>
       </div>
       <div className="right">
         <div className="contact_icon">
@@ -146,7 +146,7 @@ function Header() {
                 />
               </div>
               <div className='profile-pop-up'>
-                Profile image
+                <h4>Profile image</h4>
                 <input
                   type="file"
                   name="profileImage"
@@ -154,7 +154,7 @@ function Header() {
                   onChange={onImageChange}
                 />
               </div>
-              <button className="button-update infoButton" type="submit" onClick={handleSubmit}>
+              <button className="button-update" type="submit" onClick={handleSubmit}>
                 Update
               </button>
             </form>

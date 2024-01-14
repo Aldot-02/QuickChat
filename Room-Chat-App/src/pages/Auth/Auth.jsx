@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Auth.css";
-// import Logo from "../../img/logo.png";
 import { logIn, signUp } from "../../actions/AuthAction.js";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -50,19 +49,6 @@ const Auth = () => {
 
   return (
     <div className="Auth">
-      {/* left side */}
-
-      <div className="a-left">
-        {/* <img src={Logo} alt="" /> */}
-
-        <div className="Webname">
-          <h1>ZKC Media</h1>
-          <h6>Explore the ideas throughout the world</h6>
-        </div>
-      </div>
-
-      {/* right form side */}
-
       <div className="a-right">
         <form className="infoForm authForm" onSubmit={handleSubmit}>
           <h3>{isSignUp ? "Register" : "Login"}</h3>
@@ -131,32 +117,37 @@ const Auth = () => {
               display: confirmPass ? "none" : "block",
             }}
           >
-            *Confirm password is not same
+            Confirm password does not match your password
           </span>
-          <div>
+          <div className="auth-btn">
             <span
               style={{
                 fontSize: "12px",
-                cursor: "pointer",
-                textDecoration: "underline",
               }}
-              onClick={() => {
+            >
+              {isSignUp ? (
+                <>
+                  Already have an account?{" "}
+                  <span className="Sign-up-direction" style={{ fontWeight: "bold", cursor: "pointer"}} onClick={() => {
                 resetForm();
                 setIsSignUp((prev) => !prev);
-              }}
-            >
-              {isSignUp
-                ? "Already have an account Login"
-                : "Don't have an account Sign up"}
+              }}>Login</span>
+                </>
+              ) : (
+                <>
+                  Don't have an account?{" "}
+                  <span className="Sign-up-direction" style={{ fontWeight: "bold", cursor: "pointer" }} onClick={() => {
+                resetForm();
+                setIsSignUp((prev) => !prev);
+              }}>Sign up</span>
+                </>
+              )}
             </span>
-            <button
-              className="button infoButton"
-              type="Submit"
-              disabled={loading}
-            >
+            <button className="button" type="Submit" disabled={loading}>
               {loading ? "Loading..." : isSignUp ? "SignUp" : "Login"}
             </button>
           </div>
+
         </form>
       </div>
     </div>

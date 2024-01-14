@@ -139,14 +139,23 @@ function ChatBox({chat, currentUser, setSendMessage, receiveMessage}) {
                 <div className="chat-sender">
                   <div className='File-sender'>+</div>
                   <InputEmoji
-                  value = {newMessage}
-                  onChange = {handleChange}
-                  className="input"
+                    value={newMessage}
+                    onChange={handleChange}
+                    borderColor="none"
+                    borderRadius={4}
+                    fontSize={14}
+                    height={200}
+                    cleanOnEnter
+                    keepOpened={true}
+                    maxLength={100}
+                    className="input"
+                    
                   />
+
                   
-                  <div className="send-button button" onClick={handleSend}>
+                  <button className="button-chat" onClick={handleSend}>
                       Send
-                  </div>
+                  </button>
                 </div>
               </>
               ): (
